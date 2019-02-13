@@ -45,12 +45,13 @@ header {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-
+  margin-bottom: 5rem;
   backface-visibility: hidden;
 }
 
@@ -104,4 +105,30 @@ header {
       transform: translate(0);
       opacity: 1;
     }
+  }
+
+  .btn:link,
+  .btn:visited {
+    text-transform:uppercase; 
+    text-decoration: none;
+    padding: 0.7rem 2.5rem;
+    margin-left:-3%;
+    display: inline-block;
+    border-radius: 5rem;
+    transition: all .2s;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba( 0, 0 , 0, .2);
+  }
+
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba( 0, 0 , 0, .2);
+  }
+
+  .btn-white{
+     background-color: white;
+     color: #777;
   }

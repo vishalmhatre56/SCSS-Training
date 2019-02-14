@@ -92,43 +92,88 @@ header {
   }
 }
 @keyframes moveInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(100px);
-    }
-  
-    80% {
-      transform: translateX(-12px);
-    }
-  
-    100% {
-      transform: translate(0);
-      opacity: 1;
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
   }
 
-  .btn:link,
-  .btn:visited {
-    text-transform:uppercase; 
-    text-decoration: none;
-    padding: 0.7rem 2.5rem;
-    margin-left:-3%;
-    display: inline-block;
-    border-radius: 5rem;
-    transition: all .2s;
+  80% {
+    transform: translateX(-12px);
   }
 
-  .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba( 0, 0 , 0, .2);
+  100% {
+    transform: translate(0);
+    opacity: 1;
   }
+}
 
-  .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba( 0, 0 , 0, .2);
-  }
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7rem 2.5rem;
+  margin-left: -3%;
+  display: inline-block;
+  border-radius: 5rem;
+  transition: all 0.2s;
+  position: relative;
+}
 
-  .btn-white{
-     background-color: white;
-     color: #777;
-  }
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: white;
+  color: #777;
+}
+
+.btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .5s;
+}
+
+.btn-white::after {
+  background-color: rgb(179, 226, 206);
+}
+
+.btn:hover::after{
+  transform: scaleX(1.35) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  transition: all .3s;
+}
+
+.btn-white::before {
+  background-color: rgba(255, 255, 255, 0.641);
+}
+
+.btn:hover::before{
+  transform: scaleX(1.5) scaleY(1.8);
+  opacity: 0;
+}

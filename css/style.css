@@ -81,11 +81,9 @@ header {
     opacity: 0;
     transform: translateX(-100px);
   }
-
   80% {
     transform: translateX(12px);
   }
-
   100% {
     transform: translate(0);
     opacity: 1;
@@ -96,11 +94,19 @@ header {
     opacity: 0;
     transform: translateX(100px);
   }
-
   80% {
     transform: translateX(-12px);
   }
-
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
   100% {
     transform: translate(0);
     opacity: 1;
@@ -148,7 +154,7 @@ header {
 }
 
 .btn-white::after {
-  background-color: rgb(179, 226, 206);
+  background-color: white;
 }
 
 .btn:hover::after{
@@ -170,10 +176,14 @@ header {
 }
 
 .btn-white::before {
-  background-color: rgba(255, 255, 255, 0.641);
+  background-color: white;
 }
 
 .btn:hover::before{
   transform: scaleX(1.5) scaleY(1.8);
   opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .75s backwards;
 }

@@ -53,8 +53,60 @@ body {
     font-size: 2rem;
     font-weight: 80rem;
     letter-spacing: 1.7rem;
-    margin-left: .4rem;
+    margin-left: 0.4rem;
     animation: moveInRight 1s ease-out; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+  letter-spacing: 2px; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(10deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tretiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.2rem; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
+
+.col-1 {
+  grid-column: span 1; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  padding: 0 12rem; }
+  .grid-container div {
+    font-size: 3rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -63,9 +115,9 @@ body {
   margin-left: -3%;
   display: inline-block;
   border-radius: 10rem;
-  transition: all .2s;
+  transition: all 0.2s;
   position: relative;
-  font-size: 1.5rem; }
+  font-size: 1.6rem; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -99,7 +151,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .5s; }
+  transition: all 0.5s; }
 
 .btn::before {
   content: "";
@@ -111,10 +163,29 @@ body {
   top: 0;
   left: 0;
   z-index: -2;
-  transition: all .3s; }
+  transition: all 0.3s; }
 
 .btn--animated {
-  animation: moveInBottom .4s ease-out .4s backwards; }
+  animation: moveInBottom 0.4s ease-out 0.4s backwards; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px;
+  transition: all .2s; }
+
+.btn-text:hover {
+  color: #fff;
+  background-color: #55c57a;
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.17); }
+
+.btn-text:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
 
 .header {
   height: 95vh;
